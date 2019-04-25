@@ -49,7 +49,7 @@ app.get("/status", function(req, res) {
     if (err) {
       handleError(res, err.message, "Failed to get emotion.");
     } else {
-      console.log("DOCS DATA", docs)
+      console.log("DOCS DATA", docs[0])
       res.status(200).json(docs);
     }
   });
