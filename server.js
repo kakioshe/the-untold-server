@@ -50,7 +50,7 @@ app.get("/status", function(req, res) {
       handleError(res, err.message, "Failed to get emotion.");
     } else {
       console.log("DOCS DATA", docs[0].status)
-      res.status(200).json(docs);
+      res.status(200).json(docs[0].status);
     }
   });
 });
