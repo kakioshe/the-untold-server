@@ -74,6 +74,7 @@ app.post("/status", function(req, res) {
 app.put("/status/:id", function(req, res) {
   var updateDoc = req.body;
   delete updateDoc._id;
+  console.log("request data", updateDoc);
 
   db.collection(EMOTION_STATUS).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
     if (err) {
