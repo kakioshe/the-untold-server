@@ -51,7 +51,7 @@ app.get("/status", function(req, res) {
     } else {
       console.log("DOCS DATA", docs[0].status)
       //res.status(200).json(docs[0].status);
-      res.status(200).json();
+      res.status(200).json(docs);
     }
   });
 });
