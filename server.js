@@ -16,7 +16,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
     console.log(err);
     process.exit(1);
   }
-.
+
   db = database;
   console.log("Database connection ready");
 
