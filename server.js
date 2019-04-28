@@ -50,7 +50,8 @@ app.get("/status", function(req, res) {
       handleError(res, err.message, "Failed to get emotion.");
     } else {
       console.log("DOCS DATA", docs[0].status)
-      res.status(200).json(docs[0].status);
+      //res.status(200).json(docs[0].status);
+      res.status(200).json();
     }
   });
 });
@@ -67,8 +68,7 @@ app.post("/status", function(req, res) {
     if (err) {
       handleError(res, err.message, "Failed to create new emotion.");
     } else {
-      // res.status(201).json(doc.ops[0]);
-      res.status(201).json();
+      res.status(201).json(doc.ops[0]);
     }
   });
 });
